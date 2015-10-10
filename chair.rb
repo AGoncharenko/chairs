@@ -91,9 +91,13 @@ class Chair
       puts "Please enter user id"
     else
       user = @result.find {|user| user[:id] == param.to_i}
-      puts user
-      File.open(file_name,"w") do |f|
-        f.write({data: user}.to_json)
+      if user.nil?
+        puts "User isn't found"
+      else
+        puts user
+        File.open(file_name,"w") do |f|
+          f.write({data: user}.to_json)
+        end
       end
     end
   end
