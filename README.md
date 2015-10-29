@@ -1,14 +1,30 @@
+# Challenge content
+
+Please find the tasks in challenge.pdf
 
 # INSTALLATION
 
-Clone this repository and run 'bundle install'
+Clone this repository
+ 
+- run 'gem install bundler'
+- run 'bundle install'
 
 # RUNNING
 
-- 'ruby chair.rb task1'
-- 'ruby chair.rb task2'
-- 'ruby chair.rb task3 1'
+To run tasks 1 and 2:
 
-to save the results into csv file please add "csv" as second parameter (e.g. 'ruby chair.rb task1 csv')
+- 'ruby run.rb -t task1'
+- 'ruby run.rb -t task2'
 
-for task3 please add id of user as second parameter (e.g. 'ruby chair.rb task3 1')
+To save the results into csv file:
+
+- 'ruby run.rb -t task1 -f csv'
+- 'ruby run.rb -t task2 -f csv'
+
+Find 'result_task1.csv' and 'result_task2.csv' in current folder
+
+To run task 3:
+
+- 'ruby http.rb'
+- go to the browser and open url: 'http://localhost:4567/api/users/1'
+- change :user_id to check other users data
